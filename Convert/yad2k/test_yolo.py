@@ -116,6 +116,7 @@ def _main(args):
         iou_threshold=args.iou_threshold)
 
     for image_file in os.listdir(test_path):
+        print ('Image file processing:' + image_file)
         try:
             image_type = imghdr.what(os.path.join(test_path, image_file))
             if not image_type:

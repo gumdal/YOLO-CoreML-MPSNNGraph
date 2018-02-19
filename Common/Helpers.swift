@@ -3,13 +3,10 @@ import UIKit
 import CoreML
 import Accelerate
 
-// The labels for the 20 classes.
-let labels = [
-  "aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat",
-  "chair", "cow", "diningtable", "dog", "horse", "motorbike", "person",
-  "pottedplant", "sheep", "sofa", "train", "tvmonitor"
-]
+// The labels for the 1 class.
+let labels = ["helmet"]
 
+// Raj: Getting this anchors from the configuration file
 let anchors: [Float] = [1.08, 1.19, 3.42, 4.41, 6.63, 11.38, 9.42, 5.11, 16.62, 10.52]
 
 /**
