@@ -259,8 +259,9 @@ def _main(args):
     weights_file.close()
     print('Read {} of {} from Darknet weights.'.format(count, count +
                                                        remaining_weights))
-    if remaining_weights > 0:
-        print('Warning: {} unused weights'.format(len(remaining_weights)))
+    #Raj: len() of float error was being thrown, so since this is just a log, commenting it out!
+    #if remaining_weights > 0:
+        #print('Warning: {} unused weights'.format(len(remaining_weights)))
 
     if args.plot_model:
         plot(model, to_file='{}.png'.format(output_root), show_shapes=True)

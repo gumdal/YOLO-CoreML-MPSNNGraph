@@ -4,7 +4,7 @@
 import coremltools
 
 coreml_model = coremltools.converters.keras.convert(
-    'yad2k/model_data/tiny-yolo-voc.h5',
+    'yad2k/model_data/tiny-yolo-voc_40200.h5',
     input_names='image',
     image_input_names='image',
     output_names='grid',
@@ -19,4 +19,4 @@ coreml_model.output_description['grid'] = 'The 13x13 grid with the bounding box 
 
 print(coreml_model)
 
-coreml_model.save('../TinyYOLO-CoreML/TinyYOLO-CoreML/TinyYOLO.mlmodel')
+coreml_model.save('../TinyYOLO-CoreML/TinyYOLO-CoreML/TinyYOLO_40200.mlmodel')
